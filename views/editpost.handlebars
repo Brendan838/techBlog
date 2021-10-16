@@ -1,0 +1,25 @@
+<div class="card">
+  <h5 class="card-header">
+    <div class = 'postName'>{{editPost.title}}</div> 
+  
+  </h5>
+  <div class="card-body">
+
+ <div class="input-group">
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon3">Title  </span>
+  <textarea class="form-control" aria-label="With textarea" rows= 1 id = 'postTitle'>{{editPost.title}}</textarea>
+</div>
+
+  <span class="input-group-text">Body</span>
+  <textarea class="form-control" aria-label="With textarea" rows= 10 id = 'postBody'>{{editPost.userPost}}</textarea>
+</div>
+<button type="button" class="btn btn-primary" id = 'updateButton'>Update</button>
+<button type="button" class="btn btn-primary" id= 'deleteButton'>Delete</button>
+  </div>
+
+
+</div>
+
+<script type="text/javascript" src="/js/edit.js"></script>

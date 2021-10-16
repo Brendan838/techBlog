@@ -1,0 +1,50 @@
+.card {
+
+margin: 10px 3px 3px 3px;
+}
+
+.postInfo {
+
+float: right;
+font-size: 12px;
+
+}
+
+.postName {
+display: inline;
+
+}
+
+textarea {
+resize: none;
+}
+
+.btn {
+
+margin-top: 10px;
+
+}
+
+/* .input-group-text{
+width: 64px;
+
+} */
+
+#signup {
+
+float: right;
+
+}
+
+#logInInstead {
+
+float: right;
+
+}
+
+a {
+
+color: Black;
+
+
+}

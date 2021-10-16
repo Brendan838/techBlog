@@ -1,0 +1,15 @@
+
+
+
+{{#each userPostData as |post|}}
+<div class="card">
+  <h5 class="card-header">
+    <div class = 'postName'><a href= '/public/{{post.id}}'>{{post.title}}</a></div> 
+    <div class= 'postInfo'>Posted by {{post.username}} on {{post.createdAt}}</div>
+  </h5>
+  <div class="card-body">
+    <p class="card-text">{{post.userPost}}</p>
+ 
+  </div>
+</div>
+{{/each}}

@@ -1,0 +1,40 @@
+
+<div class="card">
+  <h5 class="card-header">
+    <div class = 'postName'>{{singlePost.title}}</div> 
+    <div class= 'postInfo'>Posted by {{singlePost.username}} on {{singlePost.createdAt}}</div>
+  </h5>
+  <div class="card-body">
+    <p class="card-text">{{singlePost.userPost}}</p>
+ 
+  </div>
+</div>
+
+{{#each comments as |comment|}}
+<div class="card">
+  <h5 class="card-header"></h5>
+  <div class="card-body">
+    <p class="card-text">{{comment.body}}</p>
+ 
+  </div>
+</div>
+{{/each}}
+
+<div class="card">
+  <h5 class="card-header">
+    <div class = 'postName'>Comment</div> 
+  
+  </h5>
+  <div class="card-body">
+
+ <div class="input-group">
+
+  <textarea class="form-control" aria-label="With textarea" rows = 3 id = "commentBody"></textarea>
+</div>
+<button type="button" class="btn btn-primary" id ="submitComment">Post Comment</button>
+  </div>
+
+
+</div>
+
+<script type="text/javascript" src="/js/comment.js"></script>

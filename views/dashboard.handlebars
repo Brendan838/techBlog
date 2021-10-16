@@ -1,0 +1,39 @@
+
+
+{{#each singleUserData as |post|}}
+<div class="card">
+  <h5 class="card-header">
+    <div class = 'postName'><a href= "/dashboard/{{post.id}}">{{post.title}}</a></div> 
+    <div class= 'postInfo'> Created on {{post.createdAt}}</div>
+  </h5>
+  <div class="card-body">
+    <p class="card-text">{{post.userPost}}</p>
+ 
+  </div>
+</div>
+{{/each}}
+
+<div class="card">
+  <h5 class="card-header">
+    <div class = 'postName'>Create New Post</div> 
+  
+  </h5>
+  <div class="card-body">
+
+ <div class="input-group">
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon3">Title  </span>
+    <textarea class="form-control" aria-label="With textarea" rows= 1 id= "newPostTitle"> </textarea>
+</div>
+
+  <span class="input-group-text">Body</span>
+  <textarea class="form-control" aria-label="With textarea" rows = 7 id= "newPostBody"></textarea>
+</div>
+<button type="button" class="btn btn-primary" id= "submitNewPost">Submit</button>
+  </div>
+
+
+</div>
+
+<script type="text/javascript" src="/js/newpost.js"></script>
