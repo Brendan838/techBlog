@@ -1,24 +1,30 @@
 
 
 
-  var username = document.querySelector('#username-signup')
-  var password = document.querySelector('#password-signup')
+  var usernameField = document.querySelector('#username-signup')
+  var passwordField = document.querySelector('#password-signup')
  var signupSubmit = document.querySelector('#signupSubmit')
 
 signupSubmit.addEventListener("click", async () => {
 
-if (username.value.length < 5|| password.value.length < 5){
+if (usernameField.value.length < 5|| passwordField.value.length < 5){
 alert("Username and password must be at least 5 characters long.")
 return
 
 }
 
 
-  if (username && password) {
+if (usernameField.value && passwordField.value) {
+
+const newUser = {
+username: usernameField.value,
+password: passwordField.value
+
+}
 
     const response = await fetch(window.location.href, {
       method: 'POST',
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify(newUser),
       headers: { 'Content-Type': 'application/json' },
     });
     console.log(response)

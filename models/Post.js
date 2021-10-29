@@ -16,7 +16,7 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-      saved_code: {
+      post_body: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -27,14 +27,20 @@ Post.init(
               key: 'id',
           }
       },
+       username: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+   
+      
     },
     {
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'post',
-      }
+    }
     );
     
     module.exports = Post;

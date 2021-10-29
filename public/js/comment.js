@@ -15,14 +15,14 @@ async function comment(commentObj) {
     },
     body: JSON.stringify(commentObj)
   });
-location.reload();
+
 }
 
 submitComment.addEventListener("click", () => {
 
   const commentObj = {
-    body: commentBody.value
+    comment_body: commentBody.value
   }
-  comment(commentObj)
-
+  comment(commentObj).then(location.reload())
+;
 });

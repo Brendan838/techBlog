@@ -5,16 +5,18 @@
     <div class= 'postInfo'>Posted by {{singlePost.username}} on {{singlePost.createdAt}}</div>
   </h5>
   <div class="card-body">
-    <p class="card-text">{{singlePost.userPost}}</p>
+    <p class="card-text">{{singlePost.post_body}}</p>
  
   </div>
 </div>
 
 {{#each comments as |comment|}}
 <div class="card">
-  <h5 class="card-header"></h5>
+  <h5 class="card-header">
+ <div class= 'postInfo'>Posted by {{comment.username}} on {{comment.createdAt}}</div>
+</h5>
   <div class="card-body">
-    <p class="card-text">{{comment.body}}</p>
+    <p class="card-text">{{comment.comment_body}}</p>
  
   </div>
 </div>

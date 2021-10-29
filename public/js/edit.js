@@ -8,16 +8,16 @@ var postTitle = document.querySelector("#postTitle")
 
 //code for delete button
 deleteButton.addEventListener("click", () => {
-deletePost()
+deletePost().then(document.location.replace('/dashboard'))
 });
 
 //code for update button
 updateButton.addEventListener("click", () => {
   const updatedPost = {
     title: postTitle.value,
-    userPost: postBody.value
+    post_body: postBody.value
   }
-updatePost(updatedPost)
+updatePost(updatedPost).then(document.location.replace('/dashboard'))
 });
 
 
@@ -26,7 +26,7 @@ async function deletePost() {
   await fetch(window.location.href, {
     method: 'DELETE'
   });
-document.location.replace('/dashboard/');
+
 }
 
 
@@ -39,6 +39,6 @@ async function updatePost(post) {
     },
     body: JSON.stringify(post),
   });
-   document.location.replace('/dashboard/');
+   ;
 }
 

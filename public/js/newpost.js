@@ -21,7 +21,7 @@ location.reload();
 submitNewPost.addEventListener("click", () => {
 
   const commentObj = {
-    body: newPostBody.value,
+    post_body: newPostBody.value,
     title: newPostTitle.value
   }
   comment(commentObj)
